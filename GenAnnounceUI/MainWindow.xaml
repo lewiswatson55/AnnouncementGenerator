@@ -1,0 +1,42 @@
+﻿<Window x:Class="GenAnnounceUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenAnnounceUI"
+        mc:Ignorable="d"
+        Title="Announcement Generator" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774">
+            <TabItem x:Name="NewDataTab" Header="Twitter" IsSelected="True" Height="23" Margin="-2,-2,-2,-0.2" VerticalAlignment="Top">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="twt_heading_label" Content="New Event" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22"/>
+                    <GridSplitter HorizontalAlignment="Left" Height="370" Margin="383,0,0,-0.4" VerticalAlignment="Top" Width="3" Background="#FFC8C8C8"/>
+                    <Label x:Name="twt_output_lable" Content="Output" HorizontalAlignment="Left" Margin="525,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Width="93"/>
+                    <Label x:Name="name_label" Content="Title:" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
+                    <Label x:Name="tel_label" Content="When: " HorizontalAlignment="Left" Margin="20,101,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
+                    <TextBox x:Name="twt_title" HorizontalAlignment="Left" Height="23" Margin="189,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Text="Event Title"/>
+                    <TextBox x:Name="twt_when" HorizontalAlignment="Left" Height="23" Margin="189,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Text="1pm, Wednesday 4th"/>
+                    <Button x:Name="twt_submit" Content="Create Post" HorizontalAlignment="Left" Margin="238,327,0,0" VerticalAlignment="Top" Width="109" Click="twt_submit_click"/>
+                    <TextBox x:Name="twt_out" HorizontalAlignment="Left" Height="277" Margin="394,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368"/>
+                    <Button x:Name="twt_clear" Content="Clear" HorizontalAlignment="Left" Margin="539,332,0,0" VerticalAlignment="Top" Width="79" Click="twt_clear_click"/>
+                    <Label x:Name="tel_label_Copy" Content="Where: " HorizontalAlignment="Left" Margin="20,142,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
+                    <TextBox x:Name="twt_where" HorizontalAlignment="Left" Height="23" Margin="189,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Text="https://zoom.enusec.org/"/>
+                    <Label x:Name="tel_label_Copy1" Content="What: " HorizontalAlignment="Left" Margin="20,190,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
+                    <TextBox x:Name="twt_what" HorizontalAlignment="Left" Height="55" Margin="189,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Text="Desc of Event"/>
+                    <Label x:Name="tel_label_Copy2" Content="Icon:" HorizontalAlignment="Left" Margin="20,259,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
+                    <ComboBox x:Name="twt_emoji" HorizontalAlignment="Left" Margin="234,265,0,0" VerticalAlignment="Top" Width="47" IsReadOnly="True">
+                        <ComboBoxItem Content="🔥" HorizontalAlignment="Left" Width="118.4"/>
+                        <ComboBoxItem Content="🖥️"/>
+                        <ComboBoxItem Content="💻"/>
+                        <ComboBoxItem Content="🔎"/>
+                        <ComboBoxItem Content="📖"/>
+                        <ComboBoxItem Content="🧑‍"/>
+                        <ComboBoxItem Content="💻"/>
+                        <ComboBoxItem Content="🕸️"/>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
